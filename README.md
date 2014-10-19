@@ -1,4 +1,4 @@
-![riot police](/img/riot-police.svg "Riot Police by Jakob Vogel from The Noun Project")
+![riot police](img/riot-police.svg "Riot Police by Jakob Vogel from The Noun Project")
 
 militarization
 ==============
