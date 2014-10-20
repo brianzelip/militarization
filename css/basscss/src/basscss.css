@@ -132,3 +132,5 @@ p:last-child, dl:last-child, ol:last-child, ul:last-child {
   border-bottom-width: .5rem;
   border-bottom-color: var(--dark-gray);
 }
+
+.break-word { overflow-wrap: break-word; }

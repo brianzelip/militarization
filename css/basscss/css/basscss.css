@@ -1611,3 +1611,7 @@ ul:last-child {
   border-bottom-width: .5rem;
   border-bottom-color: #304650;
 }
+
+.break-word {
+  overflow-wrap: break-word;
+}
