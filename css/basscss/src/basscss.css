@@ -133,4 +133,7 @@ p:last-child, dl:last-child, ol:last-child, ul:last-child {
   border-bottom-color: var(--dark-gray);
 }
 
-.break-word { overflow-wrap: break-word; }
+.break-word {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
