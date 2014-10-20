@@ -9,9 +9,17 @@ var bump = require('gulp-bump');
 // Custom Rework wrapper
 var basswork = require('gulp-basswork');
 
-gulp.task('default', ['basswork']);
+gulp.task('default', ['basswork-dev'], function() {
+  gulp.watch('./src/*.css', ['basswork-dev']);
+});
 
-gulp.task('basswork', function() {
+gulp.task('basswork-dev', function() {
+  gulp.src('./src/*.css')
+    .pipe(basswork())
+    .pipe(gulp.dest('./css'));
+});
+
+gulp.task('basswork-production', function() {
   var data = require('./package.json');
   var meta = '/*\n\n' +
              '    Basscss v' + data.version + '\n\n' +

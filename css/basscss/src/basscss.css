@@ -16,6 +16,7 @@
 
 :root {
   --container-width: 64em;
+  --red: #EB0012;
 }
 
 .terrorist {
@@ -32,6 +33,21 @@
   }
 }
 
+.avenir {
+  font-family: Avenir;
+}
+
+.serif {
+  font-family: "Source Serif Pro", Georgia, Garamond, serif;
+}
+
+/* to be used for my own future project */
+.jumbo-1 { font-size: 3.5rem; }
+.jumbo-2 { font-size: 4rem; }
+.jumbo-3 { font-size: 4.5rem; }
+.jumbo-4 { font-size: 5rem; }
+
+
 .h0 {
   font-size: 3.5rem;
 }
@@ -46,6 +62,11 @@
   }
 }
 
+.border-thick-red {
+  border-top-style: solid;
+  border-width: var(--space-1);
+  border-color: var(--red);
+}
 
 /* Base */
 html {

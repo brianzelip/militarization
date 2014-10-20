@@ -1,13 +1,4 @@
 /*
-
-    Basscss v4.1.3
-
-    Low-level CSS toolkit
-    http://basscss.com
-
-*/
-
-/*
     Basscss Base
 */
 
@@ -1058,7 +1049,7 @@ hr {
 }
 
 .field-light:invalid {
-  border-color: #f95020;
+  border-color: #EB0012;
 }
 
 .field-light.is-success {
@@ -1070,7 +1061,7 @@ hr {
 }
 
 .field-light.is-error {
-  border-color: #f95020;
+  border-color: #EB0012;
 }
 
 .radio-light,
@@ -1122,7 +1113,7 @@ hr {
 }
 
 .field-dark:invalid {
-  border-color: #f95020;
+  border-color: #EB0012;
 }
 
 .field-dark.is-success {
@@ -1134,7 +1125,7 @@ hr {
 }
 
 .field-dark.is-error {
-  border-color: #f95020;
+  border-color: #EB0012;
 }
 
 .table-light th,
@@ -1244,7 +1235,7 @@ hr {
 
 .button-red {
   color: white;
-  background-color: #f95020;
+  background-color: #EB0012;
   border-radius: 3px;
   -webkit-transition-duration: .1s;
           transition-duration: .1s;
@@ -1265,7 +1256,7 @@ hr {
 
 .button-red:focus {
   outline: none;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, .5), 0 0 1px 4px rgba(249, 80, 32, .5);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .5), 0 0 1px 4px rgba(235, 0, 18, .5);
 }
 
 .button-red:disabled,
@@ -1340,7 +1331,7 @@ hr {
 }
 
 .red {
-  color: #f95020;
+  color: #EB0012;
 }
 
 .green {
@@ -1376,7 +1367,7 @@ hr {
 }
 
 .bg-red {
-  background-color: #f95020;
+  background-color: #EB0012;
 }
 
 .bg-green {
@@ -1487,6 +1478,32 @@ hr {
   }
 }
 
+.avenir {
+  font-family: Avenir;
+}
+
+.serif {
+  font-family: "Source Serif Pro", Georgia, Garamond, serif;
+}
+
+/* to be used for my own future project */
+
+.jumbo-1 {
+  font-size: 3.5rem;
+}
+
+.jumbo-2 {
+  font-size: 4rem;
+}
+
+.jumbo-3 {
+  font-size: 4.5rem;
+}
+
+.jumbo-4 {
+  font-size: 5rem;
+}
+
 .h0 {
   font-size: 3.5rem;
 }
@@ -1501,6 +1518,12 @@ hr {
   .h0 {
     font-size: 5rem;
   }
+}
+
+.border-thick-red {
+  border-top-style: solid;
+  border-width: .5rem;
+  border-color: #EB0012;
 }
 
 /* Base */
