@@ -15,8 +15,9 @@
 @custom-media --breakpoint-lg (min-width: 64em);
 
 :root {
-  --container-width: 64em;
+  --container-width: 58rem;
   --red: #EB0012;
+  --blue-lightened: rgba(#0076df, .7);
 }
 
 .terrorist {
@@ -87,4 +88,47 @@ html {
 
 body {
   color: var(--dark-gray);
+}
+
+.p0 { padding: 0; }
+.m0 { margin: 0; }
+
+p:last-child, dl:last-child, ol:last-child, ul:last-child {
+  margin-bottom: 0;
+}
+
+
+/* COLORS */
+
+.blue-lightened {
+  color: var(--blue-lightened);
+}
+
+::selection {
+  color: var(--blue-lightened);
+}
+
+@media (--breakpoint-lg) {
+  .display-column-2 { 
+    column-count: 2;
+    column-gap: var(--space-3);
+    widows: 3;
+  }
+  .display-column-3 {
+    column-count: 3;
+    column-gap: var(--space-3);
+  }
+}
+
+/* Borders */
+.border-top-dark-2 {
+  border-top-style: solid;
+  border-top-width: .5rem;
+  border-top-color: var(--dark-gray);
+}
+
+.border-bottom-dark-2 {
+  border-bottom-style: solid;
+  border-bottom-width: .5rem;
+  border-bottom-color: var(--dark-gray);
 }
