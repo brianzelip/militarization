@@ -1,0 +1,14 @@
+
+.button-small {
+  padding: .25em var(--space-1);
+}
+
+.button-big {
+  line-height: 1.625;
+}
+
+.button-narrow {
+  padding-left: var(--space-1);
+  padding-right: var(--space-1);
+}
+

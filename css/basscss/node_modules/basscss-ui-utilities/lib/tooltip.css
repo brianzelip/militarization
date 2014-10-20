@@ -1,0 +1,29 @@
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip:after {
+  content: attr(aria-label);
+  position: absolute;
+  white-space: nowrap;
+  display: none;
+  padding: .125em .25em;
+}
+
+.tooltip:hover:after {
+  display: block;
+}
+
+.tooltip-top:after    { bottom: 100% }
+.tooltip-bottom:after { top: 100% }
+.tooltip-center:after { left: 50%; transform: translateX(-50%); }
+.tooltip-left:after   { left: 0 }
+.tooltip-right:after  { right: 0 }
+
+.tooltip-dark:after {
+  color: white;
+  background-color: rgba(#000, .875);
+  border-radius: var(--border-radius);
+}
+

@@ -1,0 +1,29 @@
+{
+  "name": "militarization",
+  "version": "0.1.0",
+  "description": "Data analysis using military surplus, LEOKA, and census datasets.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brianzelip/militarization.git"
+  },
+  "keywords": [
+    "data",
+    "analysis",
+    "police",
+    "militarization"
+  ],
+  "author": "Brian Zelip",
+  "license": "GPL v2",
+  "bugs": {
+    "url": "https://github.com/brianzelip/militarization/issues"
+  },
+  "homepage": "https://github.com/brianzelip/militarization",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-webserver": "^0.8.3"
+  }
+}

@@ -1,0 +1,69 @@
+
+@import 'basscss-base';
+@import 'basscss-utilities';
+@import 'basscss-positions';
+@import 'basscss-ui-utilities';
+@import 'basscss-grid';
+@import 'basscss-table-object';
+@import 'basscss-color-basic';
+
+/* Custom styles on top of and overriding Basscss */
+
+/* set custom media queries */
+@custom-media --breakpoint-sm (min-width: 32em);
+@custom-media --breakpoint-md (min-width: 48em);
+@custom-media --breakpoint-lg (min-width: 64em);
+
+:root {
+  --container-width: 64em;
+}
+
+.terrorist {
+  width: 200px;
+}
+@media (--breakpoint-md) {
+  .terrorist {
+    width: 250px;
+  }
+}
+@media (--breakpoint-lg) {
+  .terrorist {
+    width: 300px;
+  }
+}
+
+.h0 {
+  font-size: 3.5rem;
+}
+@media (--breakpoint-md) {
+  .h0 {
+    font-size: 4rem;
+  }
+}
+@media (--breakpoint-lg) {
+  .h0 {
+    font-size: 5rem;
+  }
+}
+
+
+/* Base */
+html {
+  font-size: 16px;
+}
+
+@media (--breakpoint-md) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (--breakpoint-lg) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  color: var(--dark-gray);
+}
