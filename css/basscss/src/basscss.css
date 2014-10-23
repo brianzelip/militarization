@@ -42,6 +42,10 @@
   font-family: "Source Serif Pro", Georgia, Garamond, serif;
 }
 
+.monospace {
+  font-family: "Source Code Pro", "PT Mono", Consolas, monospace;
+}
+
 /* to be used for my own future project */
 .jumbo-1 { font-size: 3.5rem; }
 .jumbo-2 { font-size: 4rem; }
@@ -62,6 +66,8 @@
     font-size: 5rem;
   }
 }
+
+.thin { font-weight: 100; }
 
 .border-thick-red {
   border-top-style: solid;

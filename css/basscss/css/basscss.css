@@ -1486,6 +1486,10 @@ hr {
   font-family: "Source Serif Pro", Georgia, Garamond, serif;
 }
 
+.monospace {
+  font-family: "Source Code Pro", "PT Mono", Consolas, monospace;
+}
+
 /* to be used for my own future project */
 
 .jumbo-1 {
@@ -1518,6 +1522,10 @@ hr {
   .h0 {
     font-size: 5rem;
   }
+}
+
+.thin {
+  font-weight: 100;
 }
 
 .border-thick-red {
