@@ -10,6 +10,7 @@
     <meta name="description" content="Data analysis using military surplus, LEOKA, and census datasets.">
     <meta name="author" content="Brian Zelip">
     <meta name="keywords" content="data analysis, police militarization, Michael Brown, Ferguson, Trayvon Martin, Kiwane Carrington">
+    <link rel="author" href="humans.txt">
   </head>
 
   <body>
@@ -45,7 +46,6 @@
         <img class="block mx-auto" src="img/tank.jpg" alt="AP photo ofa police sniper at a 2014 protest in Ferguson, Missouri." title="Photo: Reuters, via http://www.voanews.com/content/wars-on-drugs-terror-fostered-police-militarization-in-us/2415243.html">
         <figcaption class="h6 center italic">Riot police stand guard as demonstrators protest the shooting death of teenager Michael Brown in Ferguson, Missouri August 13, 2014. Photo: Reuters. <a href="http://www.voanews.com/content/wars-on-drugs-terror-fostered-police-militarization-in-us/2415243.html">Source</a></figcaption>
       </figure>
-
     </section>
 
     <div class="clearfix border-thick-red"></div>
@@ -56,27 +56,49 @@
           <h1 class="m0 h2 white">Data</h1>
         </div>
         <div class="p2">
-          <div class="table table-fixed center">
-            <a href="#!" class="table-cell button button-narrow button-nav-tab is-active dark-gray">Military Surplus</a>
-            <a href="#!" class="table-cell button button-narrow button-nav-tab dark-gray">LEOKA</a>
-            <a href="#!" class="table-cell button button-narrow button-nav-tab dark-gray">Census</a>
+          <div id="tab-buttons" class="table table-fixed center">
+            <a data-toggle="tab-1" class="table-cell button button-narrow button-nav-tab dark-gray is-active">Military Surplus</a>
+            <a data-toggle="tab-2" class="table-cell button button-narrow button-nav-tab dark-gray">LEOKA</a>
+            <a data-toggle="tab-3" class="table-cell button button-narrow button-nav-tab dark-gray">Census</a>
           </div>
-          <div class="p2 border-right border-bottom border-left rounded-bottom">
-            <h1 class="h2">Lorem!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
-            <ul>
-              <li><a href="">one</a></li>
-              <li><a href="">two</a></li>
-              <li><a href="">three</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+          <div id="tab-contents">
+            <div id="tab-1" class="p2 border-right border-bottom border-left rounded-bottom">
+              <h1 class="h2">Military Surplus</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
+              <ul>
+                <li><a href="">one</a></li>
+                <li><a href="">two</a></li>
+                <li><a href="">three</a></li>
+              </ul>
+            </div>
+            <div id="tab-2" class="p2 border-right border-bottom border-left rounded-bottom">
+              <h1 class="h2">LEOKA</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
+            </div>
+            <div id="tab-3" class="p2 border-right border-bottom border-left rounded-bottom">
+              <h1 class="h2">Census</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
+              <ul>
+                <li><a href="">one</a></li>
+                <li><a href="">two</a></li>
+                <li><a href="">three</a></li>
+              </ul>
+            </div>
+          </div><!-- / tab-contents -->
+        </div><!-- / p2 for section contents -->
+      </div><!-- / section border -->
     </section>
 
-    <main>
-      
-    </main>
+  <script src="//cdn.jsdelivr.net/jquery/2.1.0/jquery.min.js"></script>
+  <script src="js/tabs.js"></script>
+  <script>
+    $(function() {
+      $("#tab-buttons a").Tabs();
+    });
+  </script>
+
 
   </body>
 

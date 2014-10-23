@@ -1,0 +1,24 @@
+                            
+/* TEAM */
+
+                            
+Author: Brian Zelip
+Twitter: @bzelip
+Location: Urbana, Illinois. USA
+
+                            
+/* THANKS */
+
+Thanks Jxnblk for the awesome OOCSS library Basscss!
+    Resource URL: http://www.basscss.com/
+    About Jxnblk: http://jxnblk.com
+
+Thanks Tirumal for your tutorial on HTML5 tabs using jQuery!
+    Resource URL: http://code-tricks.com/create-a-simple-html5-tabs-using-jquery/
+    About Tirumal: http://code-tricks.com/author/tirumal/
+
+                            
+/* SITE */
+Standards: HTML5, CSS3, JS
+Components: Basscss, jQuery
+Made with: Sublime Text 2, Gulp.js, DuckDuckGo
