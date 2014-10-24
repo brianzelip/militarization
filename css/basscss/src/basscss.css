@@ -171,6 +171,13 @@ p:last-child, dl:last-child, ol:last-child, ul:last-child {
   }
 }
 
+@media (--breakpoint-lg) {
+  .ol-display-column-2 { 
+    column-count: 2;
+    column-gap: var(--space-4);
+  }
+}
+
 /* Borders */
 .border-top-dark-2 {
   border-top-style: solid;
