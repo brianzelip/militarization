@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="stylesheet" href="css/basscss/css/basscss.css">
-    <title></title>
+    <title>Police Militarization? &middot; Brian Zelip</title>
     <meta name="description" content="Data analysis using military surplus, LEOKA, and census datasets.">
     <meta name="author" content="Brian Zelip">
     <meta name="keywords" content="data analysis, police militarization, Michael Brown, Ferguson, Trayvon Martin, Kiwane Carrington">
@@ -18,8 +18,8 @@
     <header class="py2 bg-light-gray border-thick-red">
       <div class="container py3 center">
         <img class="terrorist" src="img/riot-police.svg" alt="riot police" title="Riot Police by Jakob Vogel from The Noun Project">
-        <h1 class="m0 h0 break-word">Police Militarization</h1>
-        <h2 class="m0 regular">Data analysis using military surplus distribution, <abbr title="Law Enforcement Officers Killed &amp; Attacked">LEOKA</abbr>, and census datasets</h2>
+        <h1 class="m0 h0 break-word">Police Militarization?</h1>
+        <h2 class="m0 regular">Data analysis using violent crime and military surplus distribution datasets</h2>
         <div class="mt3">
           <iframe src="http://ghbtns.com/github-btn.html?user=brianzelip&repo=militarization&type=fork&size=large" allowtransparency="true" frameborder="0" scrolling="0" width="79" height="30"></iframe>
         </div>
@@ -32,16 +32,13 @@
       <p class="h3 serif">The discussion surrounding the recent murder of teenager Michael Brown by a Ferguson, Missouri police officer has brought mainstream attention to the lack of national data on civilians who have been shot or killed by law enforcement. [1]</p>
       <p class="h3 serif">Responding to this silence, some folks are trying to collect such data from the bottom-up. [2,3,4]</p>
       <p class="h3 serif"><a href="http://twitter.com/search?q=%23Ferguson">#Ferguson</a> and similar events have renewed a concern about the militarization of local law enforcement from police to school districts. [5,6,7,8,9,10]</p>
-      <p class="h3 serif">This project asks,
+      <p class="h3 serif">This project sasks,
         <ol class="h3 serif">
           <li>Are local law enforcement agencies experiencing increasing militarization?</li>
-          <li>Are local law enforcement officers experiencing increasing violence from citizens?</li>
+          <li>Is violent crime increasing in the US?</li>
         </ol>
       </p>
-      <p class="h3 serif">To address these questions we will look at two sources of data. We will also look at </p>
-      <p class="h3 serif">The New York Times recently published data that tracks the flow of surplus military gear to local agencies nation-wide. [11, 12]</p>
-      <p class="h3 serif">that we do have. The New York Times released data that they received from a FOIA request that tracks the .One interesting dataset that has </p>
-      
+      <p class="h3 serif">To address these questions we will look at two sources of data. The first is violent crime data collected and reported annually by the FBI, and the distribution of military surplus to local law enforcement.</p>
       <figure class="mt3 mr0 mb0 ml0">
         <img class="block mx-auto" src="img/tank.jpg" alt="AP photo ofa police sniper at a 2014 protest in Ferguson, Missouri." title="Photo: Reuters, via http://www.voanews.com/content/wars-on-drugs-terror-fostered-police-militarization-in-us/2415243.html">
         <figcaption class="h6 center italic">A <a href="https://en.wikipedia.org/wiki/MRAP">MRAP</a>-like armored vehicle confronts demonstrators protesting the shooting death of teenager Michael Brown in Ferguson, Missouri August 13, 2014. Photo: Reuters. <a href="http://www.voanews.com/content/wars-on-drugs-terror-fostered-police-militarization-in-us/2415243.html">Source</a></figcaption>
@@ -50,54 +47,105 @@
 
     <div class="clearfix border-thick-red"></div>
 
-    <section class="col-10 md-col-8 lg-col-8 mx-auto py4" id="data">
+    <section class="col-10 md-col-8 lg-col-8 mx-auto mt4 mb4" id="data">
       <div class="overflow-hidden bg-white border rounded">
         <div class="bg-dark-gray p2">
           <h1 class="m0 h2 white">Data sets</h1>
         </div>
         <div class="p2">
           <div id="tab-buttons" class="table table-fixed center">
-            <a data-toggle="tab-1" class="table-cell button button-narrow button-nav-tab dark-gray is-active">Military Surplus</a>
-            <a data-toggle="tab-2" class="table-cell button button-narrow button-nav-tab dark-gray">LEOKA</a>
-            <a data-toggle="tab-3" class="table-cell button button-narrow button-nav-tab dark-gray">Census</a>
+            <a data-toggle="tab-1" class="table-cell button button-narrow button-nav-tab dark-gray is-active">Violent crime - explanatory variable</a>
+            <a data-toggle="tab-2" class="table-cell button button-narrow button-nav-tab dark-gray">Military surplus - response variable</a>
           </div>
           <div id="tab-contents">
             <div id="tab-1" class="p2 border-right border-bottom border-left rounded-bottom">
-              <h1 class="h2">Military Surplus</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
-              <ul>
-                <li><a href="">one</a></li>
-                <li><a href="">two</a></li>
-                <li><a href="">three</a></li>
-              </ul>
+              <h1 class="h2">Violent crime</h1>
+              <p>The FBI has periodically been releasing data about crime since at least the 1970s, and annually since the early 1980s. The portal into this data is <a href="http://www.fbi.gov/about-us/cjis/ucr/ucr-publications#Crime">http://www.fbi.gov/about-us/cjis/ucr/ucr-publications#Crime</a>.</p>
+              <p>This project considers the <em>Crime in the United States</em> data. I utilized the data from 2004 through 2012 because this range provided data at the county level.</p>
+              <p>The data for each year is made available in MS Excel format. A good amount of familiarizing myself with the data was required, as well as a good bit of cleaning:
+              <ol>
+                <li>As each year includes over 50 data tables, I had to identify which table to use. I compared the most recent 10 years worth of data, found the similarities running through each year, and finally identified each table to use (usually Table 10).</li>
+                <li>Stripped away unnecessary variables and values.</li>
+                <li>Added a state column and a state value to each row per table, and removed their formatting of state information.</li>
+                <li>Changed the violent crime column header to violent_crime_YYYY</li>
+                <li>Removed superscript numbers found in some county name values used as footnotes in the data to explain provenance.</li>
+                <li>Lower-cased all of the county names.</li>
+              </ol>
+              <p>Here's an example of what the original data looked like:
+                <img src="img/example-og-crime.png" alt="">
+              </p>
+              <p>The cleaned and combined data results in <strong>3,033 observations on 11 variables</strong>.</p>
             </div>
             <div id="tab-2" class="p2 border-right border-bottom border-left rounded-bottom">
-              <h1 class="h2">LEOKA</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
-            </div>
-            <div id="tab-3" class="p2 border-right border-bottom border-left rounded-bottom">
-              <h1 class="h2">Census</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor modi distinctio tenetur quas cupiditate adipisci voluptate excepturi suscipit, eveniet, voluptatem vero? Pariatur possimus sed quod ipsam, accusamus velit, atque eum.</p>
-              <ul>
-                <li><a href="">one</a></li>
-                <li><a href="">two</a></li>
-                <li><a href="">three</a></li>
-              </ul>
+              <h1 class="h2">Military surplus</h1>
+              <p>The NY Times recently published data that they received from the federal government regarding the distribution of military surplus to local law enforcement from 2006-2014. The data is available at <a href="https://github.com/TheUpshot/Military-Surplus-Gear">https://github.com/TheUpshot/Military-Surplus-Gear</a>.</p>
+              <p>The data they originally received from their FOIA request was delivered in a MS Excel file with states broken up alphabetically over five worksheets. Fortunately the Times also published this data in a csv format which included all state data in one file. This csv file is the data I used. The cleaning transformation included:
+                <ol>
+                  <li>Removed the .txt file extension from the downloaded csv file.</li>
+                  <li>Removed data about non-US states (Washington DC, GUAM, Puerto Rico, Virgin Islands).</li>
+                  <li>Isolated pertinent militarization categories:
+                    <ul>
+                      <li>airplanes</li>
+                      <li>armored vehicles</li>
+                      <li>assault trucks</li>
+                      <li>helicopters</li>
+                      <li>grenade launchers</li>
+                      <li>rifles</li>
+                    </ul>
+                  </li>
+                  <li>I kept the data that I didn't use (available in my source files).</li>
+                  <li>Removed the one row that did not have an entry for county</li>
+                  <li>Transformed original date information to year-only dates using an excel funciton and manually changing the rest (there were less than 20 of these).</li>
+                  <li>Renamed column headers to align with crime data.</li>
+                  <li>Lower-cased all of the county names</li>
+                  <li>Disaggregated all of the rows with quantities more than 1 (about 15 rows)</li>
+                </ol>
+              </p>
+              <p>Here's an example of what the original data looked like:
+                <img src="img/example-og-surplus.png">
+              </p>
+              <p>The cleaned data results in <strong>86,520 observations on 4 variables</strong>.</p>
             </div>
           </div><!-- / tab-contents -->
         </div><!-- / p2 for section contents -->
       </div><!-- / section border -->
     </section>
 
-    <section class="col-10 md-col-8 lg-col-8 mx-auto py4" id="analysis">
+    <section class="col-10 md-col-8 lg-col-8 mx-auto mb4" id="analysis">
       <div class="overflow-hidden bg-white border rounded">
         <div class="bg-dark-gray p2">
-          <h1 class="m0 h2 white">Data analysis</h1>
+          <h1 class="m0 h2 white">Aim and hypotheses</h1>
         </div>
         <div class="p2">
+          <p>The aim is to find the change in violent crime over time and the acquisition of military items by local law enforcement.</p>
+          <ol>
+            <li>The null hypothesis is that these two data are independent.</li>
+            <li>The alternative hypothesis is that the two data are dependent.</li>
+          </ol>
+        </div><!-- / p2 for section contents -->
+      </div><!-- / section border -->
+    </section>
 
+    <section class="col-10 md-col-8 lg-col-8 mx-auto mb4" id="analysis">
+      <div class="overflow-hidden bg-white border rounded">
+        <div class="bg-dark-gray p2">
+          <h1 class="m0 h2 white">Processing in R and future steps</h1>
+        </div>
+        <div class="p2">
+          <p>
+            <ol>
+              <li>To answer the ultimate question first, <strong>Yes I do think this analysis is possible</strong>.</li>
+              <li>Got the 2 datasets to talk!<br>
+                <pre>&gt;Data &lt;- merge(crime, surplus, by = c( 'county', 'state' ), all = TRUE)</pre>
+                The problem is they're speaking different languages.
+                <img src="img/view-miliData.png" alt="">
+              </li>
+              <li>...and the data is ready for plotting yet.
+                <img src="img/boxplot.png" alt="">
+              </li>
+              <li>A major challenge for me is thinking about how to extract knowledge over time.</li>
+            </ol>
+          </p>
         </div><!-- / p2 for section contents -->
       </div><!-- / section border -->
     </section>
@@ -149,7 +197,7 @@
       <div class="col-10 md-col-8 lg-col-8 mx-auto py3">
         <div class="table">
           <div class="table-cell">
-            <p class="m0 h6 thin white">&copy; <a href="http://zelip.me" class="light-gray">Brian Zelip</a> 2014. Work is <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="light-gray">CC-BY-NC-SA</a>. Website is <a rel="license" href="http://opensource.org/licenses/MIT" class="light-gray">MIT</a>.</p>
+            <p class="m0 h6 thin white">&copy; <a href="http://zelip.me" class="light-gray">Brian Zelip</a> 2014. Work is <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" class="light-gray">CC-BY-NC-SA</a>. Website made w/ <a href="http://www.basscss.com" class="light-gray">Basscss</a> and is <a rel="license" href="http://opensource.org/licenses/MIT" class="light-gray">MIT</a>.</p>
           </div>
           <div class="table-cell right-align">
             <a href="https://github.com/brianzelip" class="h6 button button-red-outline thin">github</a>

@@ -25,6 +25,8 @@
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-basswork": "0.0.9",
+    "gulp-remarkable": "0.0.3",
+    "gulp-rename": "^1.2.0",
     "gulp-webserver": "^0.8.3"
   }
 }
